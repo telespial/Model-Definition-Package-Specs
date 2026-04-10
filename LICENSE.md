@@ -1,10 +1,10 @@
-# Model Definition Format (MDF) License
+# Model Definition Package (MDF) License
 
 Copyright (c) 2026 Richard Haberkern
 
 ## 1. Overview
 
-This repository defines the Model Definition Format (MDF), including specification documents, schemas, example models, and reference materials (the "Materials").
+This repository defines the Model Definition Package (MDF), including specification documents, schemas, example models, and reference materials (the "Materials").
 
 The Materials are provided for personal, academic, research, and evaluation use.
 
@@ -86,7 +86,7 @@ This license shall be governed by and interpreted in accordance with applicable 
 
 ## 10. Scope
 
-This license applies only to the Model Definition Format (MDF) materials contained in this repository.
+This license applies only to the Model Definition Package (MDF) materials contained in this repository.
 
 It does not grant rights to:
 
