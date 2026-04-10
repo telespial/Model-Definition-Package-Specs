@@ -1,5 +1,12 @@
 # Model Definition Package (MDP)
 
+**Proposed by:** Richard Haberkern  
+**Contact:** rmhaberkern@gmail.com  
+
+*Free for evaluation. Commercial use requires permission. See `LICENSE.md` for more information.*
+
+---
+
 ## Overview
 
 The Model Definition Package (MDP) defines a machine-readable contract for embedded AI models.
