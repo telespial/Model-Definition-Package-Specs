@@ -21,7 +21,7 @@ MDP is part of the EmbeddedX Platform and is designed to operate alongside:
 
 ## Scope
 
-MDP defines the model contract only.
+MDP defines the artificial intellegence model contract only.
 
 It does not define:
 
