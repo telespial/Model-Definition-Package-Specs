@@ -9,7 +9,7 @@
 
 ## Overview
 
-The Model Definition Package (MDP) defines a machine-readable contract for embedded AI models.
+The Model Definition Package (MDP) defines a machine-readable contract for embedded EdgeAI models.
 
 It specifies model identity, interface semantics, behavioral intent, state assumptions, and degraded operation rules in a structured format suitable for deterministic tooling and embedded system integration.
 
