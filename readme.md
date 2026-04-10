@@ -16,8 +16,8 @@ It specifies model identity, interface semantics, behavioral intent, state assum
 MDP is part of the EmbeddedX Platform and is designed to operate alongside:
 
 - MRD (Machine Readable Datasheet) for hardware definition
-- EIL (Embedded Intelligence Layer) for runtime execution and signal binding
-- EIP (Embedded Intelligence Package) for deployment packaging
+- EIL (Embedded Intelligence Layer) for EdgeAI runtime execution and signal binding
+- EIP (Embedded Intelligence Package) for EdgeAI deployment packaging
 
 ## Scope
 
