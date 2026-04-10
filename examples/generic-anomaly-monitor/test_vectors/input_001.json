@@ -1,0 +1,6 @@
+{
+  "signal_primary": 0.9,
+  "signal_secondary": 0.1,
+  "context_load": 0.8,
+  "has_context_load": true
+}

@@ -1,0 +1,63 @@
+{
+  "mdp_version": "1.0.0",
+  "compliance_level": "Level 1",
+  "model_id": "generic-target-alignment-v1",
+  "model_name": "Generic Target Alignment Model",
+  "model_class": "tracking_prediction",
+  "description": "Predictive alignment model using position and optional velocity inputs.",
+  "interface": {
+    "inputs": [
+      {
+        "name": "target_position_x",
+        "data_type": "float32",
+        "unit": "normalized",
+        "required": true
+      },
+      {
+        "name": "target_position_y",
+        "data_type": "float32",
+        "unit": "normalized",
+        "required": true
+      },
+      {
+        "name": "target_velocity_x",
+        "data_type": "float32",
+        "unit": "normalized_per_second",
+        "required": false,
+        "fallback_policy": "derive_from_history",
+        "degraded_impact": "medium"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "aim_x",
+        "data_type": "float32",
+        "unit": "normalized"
+      }
+    ]
+  },
+  "behavior": {
+    "primary_objective": "predict_target_alignment",
+    "stateful": false,
+    "recommended_cycle_rate_hz": 30
+  },
+  "degraded_operation": {
+    "minimum_required_inputs": [
+      "target_position_x",
+      "target_position_y"
+    ]
+  },
+  "artifacts": {
+    "reference_runtime": "reference_runtime.cpp",
+    "test_vectors": [
+      "test_vectors/input_001.json",
+      "test_vectors/output_001.json"
+    ]
+  },
+  "traceability": {
+    "author": "EmbeddedX",
+    "organization": "EmbeddedX",
+    "created": "2026-01-01",
+    "last_modified": "2026-01-01"
+  }
+}

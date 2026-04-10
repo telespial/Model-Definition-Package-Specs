@@ -1,0 +1,129 @@
+{
+  "mdp_version": "1.0.0",
+  "compliance_level": "Level 2",
+  "model_id": "generic-anomaly-monitor-v1",
+  "model_name": "Generic Anomaly Monitor",
+  "model_class": "anomaly_detection",
+  "description": "Generic anomaly detection model for monitoring continuous signals and producing anomaly score outputs.",
+  "interface": {
+    "inputs": [
+      {
+        "name": "signal_primary",
+        "data_type": "float32",
+        "unit": "normalized",
+        "required": true,
+        "range": [
+          -1.0,
+          1.0
+        ],
+        "description": "Primary monitored signal."
+      },
+      {
+        "name": "signal_secondary",
+        "data_type": "float32",
+        "unit": "normalized",
+        "required": true,
+        "range": [
+          -1.0,
+          1.0
+        ],
+        "description": "Secondary monitored signal."
+      },
+      {
+        "name": "context_load",
+        "data_type": "float32",
+        "unit": "normalized",
+        "required": false,
+        "range": [
+          0.0,
+          1.0
+        ],
+        "description": "Optional contextual load input.",
+        "fallback_policy": "substitute_default",
+        "degraded_impact": "medium"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "anomaly_score",
+        "data_type": "float32",
+        "unit": "normalized",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "description": "Continuous anomaly score."
+      },
+      {
+        "name": "anomaly_flag",
+        "data_type": "bool",
+        "unit": "boolean",
+        "description": "Boolean anomaly indicator."
+      }
+    ]
+  },
+  "state": {
+    "stateful": true,
+    "variables": [
+      {
+        "name": "baseline_mean",
+        "data_type": "float32",
+        "description": "Rolling baseline mean."
+      },
+      {
+        "name": "baseline_delta",
+        "data_type": "float32",
+        "description": "Rolling deviation estimate."
+      }
+    ],
+    "window_samples": 16,
+    "warmup_cycles": 8
+  },
+  "behavior": {
+    "primary_objective": "detect_signal_anomaly",
+    "stateful": true,
+    "recommended_cycle_rate_hz": 20,
+    "latency_requirement_ms": 20,
+    "output_semantics": {
+      "anomaly_score": "normalized anomaly score from nominal to abnormal behavior",
+      "anomaly_flag": "true when the anomaly threshold is exceeded"
+    }
+  },
+  "constraints": {
+    "numeric_precision": "float32",
+    "memory_budget_bytes": 2048,
+    "max_compute_time_ms": 5,
+    "notes": "Reference constraints for lightweight embedded execution."
+  },
+  "degraded_operation": {
+    "minimum_required_inputs": [
+      "signal_primary",
+      "signal_secondary"
+    ],
+    "rules": [
+      {
+        "when_missing": [
+          "context_load"
+        ],
+        "fallback": "use default nominal context value",
+        "effect": "reduced anomaly selectivity under varying operating conditions",
+        "severity": "medium"
+      }
+    ],
+    "confidence_reporting": true
+  },
+  "artifacts": {
+    "reference_runtime": "reference_runtime.cpp",
+    "test_vectors": [
+      "test_vectors/input_001.json",
+      "test_vectors/output_001.json"
+    ],
+    "notes": "Reference anomaly monitor example."
+  },
+  "traceability": {
+    "author": "EmbeddedX",
+    "organization": "EmbeddedX",
+    "created": "2026-01-01",
+    "last_modified": "2026-01-01"
+  }
+}

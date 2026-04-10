@@ -1,0 +1,106 @@
+{
+  "mdp_version": "1.0.0",
+  "compliance_level": "Level 2",
+  "model_id": "generic-time-series-predictor-v1",
+  "model_name": "Generic Time Series Predictor",
+  "model_class": "time_series_prediction",
+  "description": "Generic time-series prediction model for estimating near-future values from current signal and optional trend input.",
+  "interface": {
+    "inputs": [
+      {
+        "name": "current_value",
+        "data_type": "float32",
+        "unit": "normalized",
+        "required": true,
+        "range": [
+          0.0,
+          1.0
+        ],
+        "description": "Current normalized value."
+      },
+      {
+        "name": "trend_value",
+        "data_type": "float32",
+        "unit": "normalized_per_second",
+        "required": false,
+        "range": [
+          -1.0,
+          1.0
+        ],
+        "description": "Optional trend input.",
+        "fallback_policy": "derive_from_history",
+        "degraded_impact": "low"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "predicted_value",
+        "data_type": "float32",
+        "unit": "normalized",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "description": "Predicted near-future value."
+      }
+    ]
+  },
+  "state": {
+    "stateful": true,
+    "variables": [
+      {
+        "name": "history_average",
+        "data_type": "float32",
+        "description": "Rolling average of recent values."
+      }
+    ],
+    "window_samples": 12,
+    "warmup_cycles": 4
+  },
+  "behavior": {
+    "primary_objective": "predict_near_future_value",
+    "stateful": true,
+    "prediction_horizon_ms": 250,
+    "recommended_cycle_rate_hz": 20,
+    "latency_requirement_ms": 15,
+    "output_semantics": {
+      "predicted_value": "predicted normalized value at the declared short-term horizon"
+    }
+  },
+  "constraints": {
+    "numeric_precision": "float32",
+    "memory_budget_bytes": 2048,
+    "max_compute_time_ms": 5,
+    "notes": "Reference constraints for lightweight forecast execution."
+  },
+  "degraded_operation": {
+    "minimum_required_inputs": [
+      "current_value"
+    ],
+    "rules": [
+      {
+        "when_missing": [
+          "trend_value"
+        ],
+        "fallback": "estimate trend from recent history",
+        "effect": "prediction remains valid with reduced responsiveness to sudden change",
+        "severity": "low"
+      }
+    ],
+    "confidence_reporting": true
+  },
+  "artifacts": {
+    "reference_runtime": "reference_runtime.cpp",
+    "test_vectors": [
+      "test_vectors/input_001.json",
+      "test_vectors/output_001.json"
+    ],
+    "notes": "Reference time-series predictor example."
+  },
+  "traceability": {
+    "author": "EmbeddedX",
+    "organization": "EmbeddedX",
+    "created": "2026-01-01",
+    "last_modified": "2026-01-01"
+  }
+}
