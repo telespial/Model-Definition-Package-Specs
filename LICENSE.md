@@ -1,10 +1,12 @@
-# Model Definition Package (MDF) License
+# Model Definition Package (MDP) License
 
 Copyright (c) 2026 Richard Haberkern
 
 ## 1. Overview
 
-This repository defines the Model Definition Package (MDF), including specification documents, schemas, example models, and reference materials (the "Materials").
+This repository defines the Model Definition Package (MDP), including specification documents, schemas, example models, and reference materials (the "Materials").
+
+The term MDF (Model Definition Format) may be used interchangeably to refer to the same specification.
 
 The Materials are provided for personal, academic, research, and evaluation use.
 
@@ -29,10 +31,10 @@ You may NOT, without prior written permission from the author:
 
 - use the Materials in any commercial product or service  
 - distribute the Materials as part of a commercial system  
-- integrate MDF into a revenue-generating workflow or platform  
-- offer MDF-based systems as a hosted or managed service  
+- integrate MDP or MDF into a revenue-generating workflow or platform  
+- offer MDP-based or MDF-based systems as a hosted or managed service  
 - sublicense, sell, or redistribute the Materials for commercial use  
-- represent modified versions as the official MDF specification  
+- represent modified versions as the official specification  
 - remove or alter copyright or license notices  
 
 ---
@@ -86,7 +88,7 @@ This license shall be governed by and interpreted in accordance with applicable 
 
 ## 10. Scope
 
-This license applies only to the Model Definition Package (MDF) materials contained in this repository.
+This license applies only to the Model Definition Package (MDP) materials contained in this repository.
 
 It does not grant rights to:
 
