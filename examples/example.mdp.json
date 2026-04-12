@@ -1,0 +1,20 @@
+{
+  "model": "adaptive_reasoning_demo",
+  "inputs": [
+    {
+      "name": "temperature",
+      "unit": "C",
+      "sampleRateHz": 10
+    }
+  ],
+  "outputs": [
+    {
+      "name": "alert_level",
+      "type": "enum"
+    }
+  ],
+  "degraded_operation": {
+    "supported": true,
+    "behavior": "emit lower confidence"
+  }
+}

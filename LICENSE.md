@@ -1,102 +1,40 @@
-# Model Definition Package (MDP) License
+# EmbeddedX License
 
 Copyright (c) 2026 Richard Haberkern
 
 ## 1. Overview
 
-This repository defines the Model Definition Package (MDP), including specification documents, schemas, example models, and reference materials (the "Materials").
-
-The term MDF (Model Definition Format) may be used interchangeably to refer to the same specification.
-
-The Materials are provided for personal, academic, research, and evaluation use.
-
-Commercial use of the Materials is not permitted without explicit written permission from the author.
-
----
+This software and associated documentation are provided for personal, academic, educational, research, and evaluation use.
+Commercial use is not permitted without explicit written permission from the author.
 
 ## 2. Permitted Use
 
 You are granted a non-exclusive, non-transferable, revocable license to:
 
-- use the Materials for personal, educational, or research purposes  
-- evaluate the Materials for potential commercial applications  
-- create and modify model definitions for non-commercial use  
-- build internal prototypes or tooling for evaluation purposes  
-
----
+* Use the Software for personal, educational, research, and evaluation purposes
+* Review and adapt the documentation for non-commercial study and experimentation
+* Create non-commercial derivative materials for internal testing and standards exploration
+* Evaluate the Software for potential commercial applications
 
 ## 3. Restrictions
 
 You may NOT, without prior written permission from the author:
 
-- use the Materials in any commercial product or service  
-- distribute the Materials as part of a commercial system  
-- integrate MDP or MDF into a revenue-generating workflow or platform  
-- offer MDP-based or MDF-based systems as a hosted or managed service  
-- sublicense, sell, or redistribute the Materials for commercial use  
-- represent modified versions as the official specification  
-- remove or alter copyright or license notices  
+* Use the Software for commercial purposes
+* Sell, sublicense, or distribute the Software as part of a commercial product or service
+* Use the Software in any revenue-generating system
+* Represent altered versions as the official EmbeddedX specification
+* Remove or modify copyright or license notices
 
----
-
-## 4. Commercial Licensing
-
-For commercial use, licensing, or partnership inquiries, contact:
+## 4. Contact
 
 Richard Haberkern  
 rmhaberkern@gmail.com
 
----
+## 5. Disclaimer
 
-## 5. Ownership
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
 
-All rights, title, and interest in the Materials remain the exclusive property of the author.
+* * *
 
-No ownership rights are transferred under this license.
-
----
-
-## 6. Disclaimer of Warranty
-
-THE MATERIALS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO:
-
-- MERCHANTABILITY  
-- FITNESS FOR A PARTICULAR PURPOSE  
-- NON-INFRINGEMENT  
-
----
-
-## 7. Limitation of Liability
-
-IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT, OR OTHERWISE, ARISING FROM OR IN CONNECTION WITH THE MATERIALS OR THEIR USE.
-
----
-
-## 8. Termination
-
-This license is automatically terminated if any of its terms are violated.
-
-Upon termination, all use of the Materials must cease and all copies must be deleted.
-
----
-
-## 9. Governing Law
-
-This license shall be governed by and interpreted in accordance with applicable laws.
-
----
-
-## 10. Scope
-
-This license applies only to the Model Definition Package (MDP) materials contained in this repository.
-
-It does not grant rights to:
-
-- MRD (Machine Readable Datasheet) specifications  
-- EIL (Embedded Intelligence Layer) implementations  
-- EIP (Embedded Intelligence Package) artifacts  
-- Codemaster or other proprietary systems  
-
----
-
-Commercial use requires explicit permission.
+For commercial use, permission is required.
