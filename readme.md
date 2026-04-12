@@ -49,7 +49,7 @@ MDP establishes a portable model contract so runtime layers, package formats, an
 * [EmbeddedX-Specs](https://github.com/telespial/EmbeddedX-Specs) establishes the umbrella platform
 * [Machine-Readable-Datasheets-Specs](https://github.com/telespial/Machine-Readable-Datasheets-Specs) establishes hardware truth
 * [Embedded-Intelligence-Layer-Specs](https://github.com/telespial/Embedded-Intelligence-Layer-Specs) should preserve MDP-defined runtime assumptions
-* [AI-Coding-Specification](https://github.com/telespial/AI-Coding-Specification) should not generate integration code that contradicts MDP
+* [AI-Integrated-Coding-System-Spec](https://github.com/telespial/AI-Integrated-Coding-System-Spec) should not generate integration code that contradicts MDP
 * [Embedded-Intelligence-Package-Specs](https://github.com/telespial/Embedded-Intelligence-Package-Specs) may package MDP-defined artifacts for deployment
 
 * * *
