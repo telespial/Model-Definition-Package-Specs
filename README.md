@@ -1,5 +1,7 @@
 # Model Definition Package (MDP)
 
+[← Back to EmbeddedX-Specs (canonical index)](https://github.com/telespial/EmbeddedX-Specs)
+
 ## Model Metadata for Embedded Inference and Integration
 
 Proposed by: Richard Haberkern  
