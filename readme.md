@@ -1,6 +1,6 @@
 # Model Definition Package (MDP)
 
-## A Machine-Readable Contract for Embedded EdgeAI Models with Clear Interfaces, Behavior, and Degraded Operation Support
+## Model Metadata for Embedded Inference and Integration
 
 Proposed by: Richard Haberkern  
 Contact: rmhaberkern@gmail.com
@@ -13,9 +13,9 @@ Part of the [EmbeddedX platform](https://github.com/telespial/EmbeddedX-Specs).
 
 ## Abstract
 
-Model Definition Package (MDP) establishes a machine-readable contract for defining embedded EdgeAI models with clear interfaces, behavior, and degraded operation support. It is designed to enable portable, application-neutral models that integrate deterministically across embedded systems.
+Model Definition Package (MDP) defines a machine-readable format for embedded Edge AI models, including their interfaces, runtime assumptions, and degraded-operation behavior. The point is to make models portable and easier to integrate across embedded systems.
 
-MDP focuses on model-facing truth: inputs, outputs, windows, sampling, behavioral metadata, degraded operation support, runtime assumptions, and deployment constraints. The goal is to define embedded models in a form that can be validated, packaged, and integrated consistently.
+MDP focuses on model-facing data: inputs, outputs, windows, sampling, behavior metadata, degraded-operation support, runtime assumptions, and deployment constraints. It gives tools a stable description of what a model expects and what it returns.
 
 * * *
 
@@ -47,7 +47,7 @@ MDP establishes a portable model contract so runtime layers, package formats, an
 ## 3. Relationship to Other Repositories
 
 * [EmbeddedX-Specs](https://github.com/telespial/EmbeddedX-Specs) establishes the umbrella platform
-* [Machine-Readable-Datasheets-Specs](https://github.com/telespial/Machine-Readable-Datasheets-Specs) establishes hardware truth
+* [Machine-Readable-Datasheets-Specs](https://github.com/telespial/Machine-Readable-Datasheets-Specs) defines hardware capabilities visible to firmware
 * [Machine-Readable-Connectivity-Specs](https://github.com/telespial/Machine-Readable-Connectivity-Specs) may help describe signal provenance, scaling paths, and degraded board-level conditions
 * [Embedded-Intelligence-Layer-Specs](https://github.com/telespial/Embedded-Intelligence-Layer-Specs) should preserve MDP-defined runtime assumptions
 * [AI-Integrated-Coding-System-Spec](https://github.com/telespial/AI-Integrated-Coding-System-Spec) should not generate integration code that contradicts MDP
