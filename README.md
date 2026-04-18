@@ -7,7 +7,7 @@
 Proposed by: Richard Haberkern  
 Contact: rmhaberkern@gmail.com
 
-Free for evaluation. Commercial use requires permission. See `license.md` for more information.
+Free for evaluation. Commercial use requires permission. See `LICENSE.md` for more information.
 
 Part of the **EmbeddedX specification family**.
 
@@ -68,4 +68,4 @@ If runtime integration depends on it, MDP should be able to express it.
 
 ## License
 
-See `license.md`.
+See `LICENSE.md`.
